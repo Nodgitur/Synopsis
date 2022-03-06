@@ -16,3 +16,20 @@
 
 @import "simple_calendar";
 @import "bootstrap";
+
+body{
+    background-size: 100%;
+    background: url("SynopsisHomeWallpaper.png");
+}
+
+#tester{
+    font-size: 500px;
+}
+
+.wrapper{
+    position: absolute;
+    top: 100vh;
+    transform: translateY(-100%);
+    width: 100%;
+}
+
