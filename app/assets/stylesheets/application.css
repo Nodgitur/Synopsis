@@ -17,9 +17,9 @@
 @import "simple_calendar";
 @import "bootstrap";
 
-body{
-    background-size: 100%;
-    background: url("SynopsisHomeWallpaper.png");
+#background-image{
+    background-size: cover;
+    background: url("SynopsisHomeWallpaper.png") no-repeat;
 }
 
 #tester{

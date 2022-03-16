@@ -5,7 +5,7 @@ class MeetingsControllerTest < ActionDispatch::IntegrationTest
     @meeting = meetings(:one)
   end
 
-  test "should get index" do
+  test "should get notes" do
     get meetings_url
     assert_response :success
   end
