@@ -5,7 +5,7 @@ class MeetingsTest < ApplicationSystemTestCase
     @meeting = meetings(:one)
   end
 
-  test "visiting the index" do
+  test "visiting the notes" do
     visit meetings_url
     assert_selector "h1", text: "Meetings"
   end
