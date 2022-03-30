@@ -4,11 +4,16 @@
 
 <div id="meetings">
   <% @meetings.each do |meeting| %>
+<!--    This will restrict the meetings seen to a particular user. Similar implementation should be employed into the
+        notes page-->
+    <% if meeting.user == current_user %>
     <%= render meeting %>
     <p>
       <%= link_to "Show this meeting", meeting %>
     </p>
   <% end %>
 </div>
+<%end %>
+
 
 <%= link_to "New meeting", new_meeting_path %>

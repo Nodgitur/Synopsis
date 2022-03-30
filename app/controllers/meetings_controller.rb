@@ -1,5 +1,6 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!
 
   # GET /meetings or /meetings.json
   def index
@@ -63,8 +64,8 @@ class MeetingsController < ApplicationController
       @meeting = Meeting.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
+    # Only allow a list of trusted parameters through. Note, the user id has been added to make the meetings unique
     def meeting_params
-      params.require(:meeting).permit(:Example, :start_time)
+      params.require(:meeting).permit(:Example, :start_time, :user_id)
     end
 end

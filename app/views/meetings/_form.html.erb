@@ -1,3 +1,4 @@
+<!--Inside app/views/meetings/_form.html.erb-->
 <%= form_with(model: meeting) do |form| %>
   <% if meeting.errors.any? %>
     <div style="color: red">
@@ -19,6 +20,11 @@
   <div>
     <%= form.label :start_time, style: "display: block" %>
     <%= form.datetime_field :start_time %>
+  </div>
+<!--  This div is being used to retrieve the user_id from the user that is logged in. The database is storing this column-->
+<!--  value, so keeping the value attached to a meeting can be used to make the meetings unique to each user-->
+  <div>
+    <%= form.number_field :user_id, id: :meeting_user_id, value: current_user.id, type: :hidden %>
   </div>
 
   <div>
