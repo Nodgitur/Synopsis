@@ -22,10 +22,7 @@
       </li>
       <% else %>
       <li class="nav-item">
-        <a class="nav-link disabled"><%= link_to 'Sign up', new_user_registration_path %></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled"><%= link_to 'Sign in', new_user_session_path %></a>
+        <a class="nav-link disabled"><%= link_to 'Sign in or Sign up', new_user_session_path %></a>
       </li>
       <% end %>
     </ul>
