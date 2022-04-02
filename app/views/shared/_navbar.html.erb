@@ -1,0 +1,37 @@
+<nav class="navbar navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" hrrailsef="#">
+      <%= image_tag("SynopsisLogo.png", class: "d-inline-block align-top", width: 50, height: 60, alt: "Application Logo") %>
+      Synopsis
+    </a>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#"><%= link_to 'Home', root_path, class: 'nav-link' %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#"><%= link_to 'Notes', notes_path, class: 'nav-link' %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#"><%= link_to 'Meetings', meetings_path, class: 'nav-link' %></a>
+      </li>
+      <!--    With this if/else statement we are checking if the user is signed in. If they are, they can sign out. -->
+      <!--    If they are not, they can sign up or sign in-->
+      <% if current_user %>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></a>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <a class="nav-link disabled"><%= link_to 'Sign up', new_user_registration_path %></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled"><%= link_to 'Sign in', new_user_session_path %></a>
+      </li>
+      <% end %>
+    </ul>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+  </div>
+</nav>

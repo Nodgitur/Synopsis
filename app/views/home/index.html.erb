@@ -1,15 +1,6 @@
 <!-- inside app/views/home/index.html.erb -->
 <div class="Wrapper">
   <div id="tester">
-    <!--    With this if/else statement we are checking if the user is signed in. If they are, they can sign out. -->
-    <!--    If they are not, they can sign up or sign in-->
-    <% if current_user %>
-      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Sign up', new_user_registration_path %>
-
-      <%= link_to 'Sign in', new_user_session_path %>
-    <% end %>
     <!--    <div class="card border-light mb-3" style="max-width: 18rem; padding-left: 50px;">-->
     <!--      <div class="card-header">Welcome, this is the home page</div>-->
     <!--      <div class="card-body">-->
