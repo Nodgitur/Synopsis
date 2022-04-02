@@ -21,6 +21,12 @@
     <%= form.datetime_field :start_time %>
   </div>
 
+<!--  Used for including the signed in user id when creating a meeting-->
+  <div>
+    <%= form.number_field :user_id, id: :meetings_user_id, class: "display: block", value: current_user.id,
+    type: :hidden %>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>
