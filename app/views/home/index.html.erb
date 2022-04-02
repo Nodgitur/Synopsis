@@ -1,20 +1,18 @@
 <!-- inside app/views/home/index.html.erb -->
-<div class="Wrapper">
-  <div id="tester">
-    <!--    <div class="card border-light mb-3" style="max-width: 18rem; padding-left: 50px;">-->
-    <!--      <div class="card-header">Welcome, this is the home page</div>-->
-    <!--      <div class="card-body">-->
-    <!--        <h5 class="card-title">Light card title</h5>-->
-    <!--        <button type="button"-->
-    <!--                class="btn btn-lg btn-danger"-->
-    <!--                data-bs-toggle="popover"-->
-    <!--                title="Success!"-->
-    <!--                data-bs-content="JavaScript with Bootstrap working!">-->
-    <!--          Click to check if JavaScript is working-->
-    <!--        </button>-->
-    <!--        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-    <!--      </div>-->
-    <!--    </div>-->
+<div id = "wrapper">
+  <div class="card border-light mb-3" style="max-width: 50rem; padding-bottom: 50px;">
+    <div class="card-header">Welcome, this is the home page</div>
+    <div class="card-body">
+      <h5 class="card-title">Light card title</h5>
+      <button type="button"
+              class="btn btn-lg btn-danger"
+              data-bs-toggle="popover"
+              title="Success!"
+              data-bs-content="JavaScript with Bootstrap working! ">
+        Click to check if JavaScript is working
+      </button>
+      <p class="card-text"> Location: <%= @country %> , <%= @city %></p>
+    </div>
   </div>
 </div>
 

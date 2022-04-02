@@ -2,6 +2,7 @@
 
 //=require jquery
 //=require jquery_ujs
+//=require bootstrap
 
 let popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
 let popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
