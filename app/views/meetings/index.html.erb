@@ -4,10 +4,13 @@
 
 <div id="meetings">
   <% @meetings.each do |meeting| %>
-    <%= render meeting %>
-    <p>
-      <%= link_to "Show this meeting", meeting %>
-    </p>
+    <% if meeting.user == current_user %>
+      <%= render meeting %>
+      <p>
+        <%= link_to "Show this meeting", meeting %>
+      </p>
+      <%else %>
+    <% end %>
   <% end %>
 </div>
 
