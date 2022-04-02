@@ -1,47 +1,29 @@
 <!-- inside app/views/home/index.html.erb -->
-<nav class="navbar navbar-dark bg-primary">
-  <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" hrrailsef="#">
-      <%=image_tag("SynopsisLogo.png", class:"d-inline-block align-top", width: 50, height: 60, alt:"Application Logo")%>
-      Synopsis
-    </a>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-    </div>
-</nav>
 <div class="Wrapper">
   <div id="tester">
-    HELLO
-<!--    <div class="card border-light mb-3" style="max-width: 18rem; padding-left: 50px;">-->
-<!--      <div class="card-header">Welcome, this is the home page</div>-->
-<!--      <div class="card-body">-->
-<!--        <h5 class="card-title">Light card title</h5>-->
-<!--        <button type="button"-->
-<!--                class="btn btn-lg btn-danger"-->
-<!--                data-bs-toggle="popover"-->
-<!--                title="Success!"-->
-<!--                data-bs-content="JavaScript with Bootstrap working!">-->
-<!--          Click to check if JavaScript is working-->
-<!--        </button>-->
-<!--        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
-<!--      </div>-->
-<!--    </div>-->
+    <!--    With this if/else statement we are checking if the user is signed in. If they are, they can sign out. -->
+    <!--    If they are not, they can sign up or sign in-->
+    <% if current_user %>
+      <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Sign up', new_user_registration_path %>
+
+      <%= link_to 'Sign in', new_user_session_path %>
+    <% end %>
+    <!--    <div class="card border-light mb-3" style="max-width: 18rem; padding-left: 50px;">-->
+    <!--      <div class="card-header">Welcome, this is the home page</div>-->
+    <!--      <div class="card-body">-->
+    <!--        <h5 class="card-title">Light card title</h5>-->
+    <!--        <button type="button"-->
+    <!--                class="btn btn-lg btn-danger"-->
+    <!--                data-bs-toggle="popover"-->
+    <!--                title="Success!"-->
+    <!--                data-bs-content="JavaScript with Bootstrap working!">-->
+    <!--          Click to check if JavaScript is working-->
+    <!--        </button>-->
+    <!--        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+    <!--      </div>-->
+    <!--    </div>-->
   </div>
 </div>
 
