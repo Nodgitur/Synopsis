@@ -48,6 +48,9 @@ gem 'rexml'
 # For API calls
 gem 'httparty'
 
+# My own gem, for weather in a user's location. It uses the OpenWeatherMap API
+gem 'weather-synopsis', '~> 0.0.1'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
