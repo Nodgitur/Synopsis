@@ -249,6 +249,7 @@ DEPENDENCIES
   pg
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.2)
+  rexml
   selenium-webdriver
   simple_calendar (~> 2.4)
   spring
