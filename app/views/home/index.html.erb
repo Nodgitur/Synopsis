@@ -12,8 +12,13 @@
         Click to check if JavaScript is working
       </button>
       <p class="card-text"> Location: <%= @country %>, <%= @city %></p>
-      <p><%= weather = Weather.instance
-             puts weather.posts %></p>
+      <p><%= if !@country.nil? && !@city.nil?
+
+        weather = Weather.instance
+             puts weather.posts
+      else
+      puts "Sorry, no weather data"
+      end %></p>
     </div>
   </div>
 </div>
