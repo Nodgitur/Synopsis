@@ -12,9 +12,13 @@
         Click to check if JavaScript is working
       </button>
       <p class="card-text"> Location: <%= @country %>, <%= @city %></p>
-      <p><%= "Hello there. There should weather data here" %></p>
+      <p><%= if Rails.env.production?
+
+        weather = Weather.instance
+             puts weather.posts
+      else
+      puts "Sorry, temperature could not be found"
+      end %></p>
     </div>
   </div>
 </div>
-
-
