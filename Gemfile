@@ -42,7 +42,11 @@ gem 'geocoder'
 # This is for the user's address
 gem 'geokit'
 
+# Gem for documentation parsing
 gem 'rexml'
+
+# For API calls
+gem 'httparty'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"

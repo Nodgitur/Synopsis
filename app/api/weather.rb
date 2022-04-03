@@ -1,7 +1,30 @@
 require 'singleton'
+require 'open-uri'
+require 'json'
+require 'net/http'
+require 'httparty'
+require 'rubygems'
 
 class Weather
   include Singleton
-  location = "https://api.openweathermap.org/data/2.5/weather?q=#{@city},#{@country}&appid=4b1d1de8d743ff0d538d643cf0cbc850"
-  puts location
+  include HTTParty
+
+  def posts
+    p = self.class.get("https://api.openweathermap.org/data/2.5/weather?q=#{@city},#{@country}&appid=4b1d1de8d743ff0d538d643cf0cbc850")
+
+    # Getting an array of the first level keys from the json object
+    array = p.keys
+
+    # Printing the array
+    array
+
+    # Moving two levels deep into the json file, to get the temperature of our city
+    temperature = p['main']['temp']
+
+    # Converting the value from kelvin to celsius
+    celsius = temperature - 273.15
+
+    # Rounding the value off to give a whole number
+    puts celsius.round(0)
+  end
 end
