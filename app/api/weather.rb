@@ -1,4 +1,4 @@
-require 'singleton'
+require 'Singleton'
 require 'open-uri'
 require 'json'
 require 'net/http'
