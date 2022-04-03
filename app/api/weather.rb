@@ -9,7 +9,7 @@ class Weather
   include Singleton
   include HTTParty
 
-  def posts
+  def earth_data
     p = self.class.get("https://api.openweathermap.org/data/2.5/weather?q=#{@city},#{@country}&appid=4b1d1de8d743ff0d538d643cf0cbc850")
 
     # Getting an array of the first level keys from the json object
@@ -28,3 +28,6 @@ class Weather
     puts celsius.round(0)
   end
 end
+
+weather = Weather.instance
+@temp = weather.earth_data
