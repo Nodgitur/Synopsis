@@ -1,4 +1,4 @@
-require 'Singleton'
+require 'singleton'
 require 'open-uri'
 require 'json'
 require 'net/http'
@@ -8,6 +8,8 @@ require 'rubygems'
 class Weather
   include Singleton
   include HTTParty
+
+  attr_accessor :temp
 
   def earth_data
     p = self.class.get("https://api.openweathermap.org/data/2.5/weather?q=#{@city},#{@country}&appid=4b1d1de8d743ff0d538d643cf0cbc850")
@@ -25,9 +27,10 @@ class Weather
     celsius = temperature - 273.15
 
     # Rounding the value off to give a whole number
-    puts celsius.round(0)
+    celsius.round(0)
   end
 end
 
-weather = Weather.instance
-@temp = weather.earth_data
+# weather = Weather.instance
+# weather.earth_data
+# puts weather.temp
