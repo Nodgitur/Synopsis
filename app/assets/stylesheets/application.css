@@ -19,7 +19,9 @@
 
 body{
     background-size: 100%;
-    background: url("SynopsisHomeWallpaper.png");
+    background: url("SynopsisHomeWallpaper.png") no-repeat;
+    background-size: cover;
+    padding-bottom: 0;
 }
 
 #tester{

@@ -97,6 +97,7 @@ GEM
     digest (3.1.0)
     erubi (1.10.0)
     geocoder (1.7.5)
+    geokit (1.13.1)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -241,6 +242,7 @@ DEPENDENCIES
   debug
   devise
   geocoder
+  geokit
   importmap-rails
   jbuilder
   jquery-rails

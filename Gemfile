@@ -12,7 +12,7 @@ gem "simple_calendar", "~> 2.4"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use sqlite3 as the database for Active Record
+# Use postgresql as the database
 gem "pg"
 
 # Use the Puma web server [https://github.com/puma/puma]
@@ -38,6 +38,9 @@ gem 'jquery-rails'
 
 # This is for getting the user's location
 gem 'geocoder'
+
+# This is for the user's address
+gem 'geokit'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
