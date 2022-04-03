@@ -12,7 +12,9 @@
         Click to check if JavaScript is working
       </button>
       <p class="card-text"> Location: <%= @country %>, <%= @city %></p>
-      <p><%= weather = Weather.instance
+      <p><%= require '../../api/weather.rb'
+
+        weather = Weather.instance
              puts weather.posts %></p>
     </div>
   </div>
