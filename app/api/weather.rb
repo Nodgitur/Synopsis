@@ -11,8 +11,11 @@ class Weather
 
   attr_accessor :temp
 
+  #Dublin,IE
+  # #{@city},#{@country}
+
   def earth_data
-    p = self.class.get("https://api.openweathermap.org/data/2.5/weather?q=#{@city},#{@country}&appid=4b1d1de8d743ff0d538d643cf0cbc850")
+    p = self.class.get("https://api.openweathermap.org/data/2.5/weather?q=Dublin,IE&appid=4b1d1de8d743ff0d538d643cf0cbc850")
 
     # Getting an array of the first level keys from the json object
     array = p.keys
@@ -30,7 +33,3 @@ class Weather
     celsius.round(0)
   end
 end
-
-# weather = Weather.instance
-# weather.earth_data
-# puts weather.temp
