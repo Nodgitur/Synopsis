@@ -1,10 +1,6 @@
 require 'Weather-Synopsis'
 
 class HomeController < ApplicationController
-
-  #Dublin,IE
-  # #{@city},#{@country}
-
   def index
     if Rails.env.production?
       #Geocoder gem only works in production environment database
