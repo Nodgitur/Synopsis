@@ -11,7 +11,9 @@ class HomeController < ApplicationController
       @country = request.location.country_code
       @city = request.location.city
       # Calling temperature from home_controller using custom weather gem
-      @temp = Weather.instance.earth_data(city: @city, country_code: @country, api_key: "4b1d1de8d743ff0d538d643cf0cbc850")
+      @temp = Weather.instance.earth_data(city: @city,
+                                          country_code: @country,
+                                          api_key: "4b1d1de8d743ff0d538d643cf0cbc850")
     else
       @country = "Location not found"
       @city = "please ensure that this is production environment"
