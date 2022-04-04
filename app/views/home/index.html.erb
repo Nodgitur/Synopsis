@@ -3,16 +3,9 @@
   <div class="card border-light mb-3" style="max-width: 50rem; padding-bottom: 50px;">
     <div class="card-header">Welcome, this is the home page</div>
     <div class="card-body">
-      <h5 class="card-title">Light card title</h5>
-      <button type="button"
-              class="btn btn-lg btn-danger"
-              data-bs-toggle="popover"
-              title="Success!"
-              data-bs-content="JavaScript with Bootstrap working! ">
-        Click to check if JavaScript is working
-      </button>
-<!--      <p class="card-text"> Location: <%#= @country %>, <%#= @city %></p>-->
-<!--      <p> <%#= "The temperature is " + @temp.to_s + " degrees celsius" %></p>-->
+      <h5 class="card-title">Here is the weather in your location</h5>
+      <p class="card-text"> Location: <%= @country %>, <%= @city %></p>
+      <p> <%= "The temperature is " + @temp.to_s + " degrees celsius" %></p>
     </div>
   </div>
 </div>

@@ -18,11 +18,11 @@
       <!--    If they are not, they can sign up or sign in-->
       <% if current_user %>
       <li class="nav-item">
-        <a class="nav-link" href="#"><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></a>
+        <a class="nav-link" href="#"><%= link_to 'Sign out', destroy_user_session_path, class: 'nav-link', method: :delete %></a>
       </li>
       <% else %>
       <li class="nav-item">
-        <a class="nav-link disabled"><%= link_to 'Sign in or Sign up', new_user_session_path %></a>
+        <a class="nav-link disabled"><%= link_to 'Sign in or Sign up', new_user_session_path, class: 'nav-link' %></a>
       </li>
       <% end %>
     </ul>
